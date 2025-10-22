@@ -83,6 +83,7 @@ const Index = () => {
               scale={scale}
               position={position}
               onPositionChange={setPosition}
+              onScaleChange={setScale}
               canvasRef={canvasRef}
             />
           </div>
