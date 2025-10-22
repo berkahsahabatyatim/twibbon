@@ -74,7 +74,7 @@ export const ImageEditor = ({
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!isDragging) return;
-    
+
     onPositionChange({
       x: e.clientX - dragStart.x,
       y: e.clientY - dragStart.y,
@@ -96,7 +96,7 @@ export const ImageEditor = ({
 
   const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
     if (!isDragging) return;
-    
+
     const touch = e.touches[0];
     onPositionChange({
       x: touch.clientX - dragStart.x,
@@ -112,9 +112,8 @@ export const ImageEditor = ({
     <Card className="p-4 shadow-card">
       <div
         ref={containerRef}
-        className={`relative w-full aspect-[4/5] bg-muted rounded-lg overflow-hidden ${
-          userImage && frameImage ? "cursor-move" : ""
-        }`}
+        className={`relative w-full aspect-[4/5] bg-muted rounded-lg overflow-hidden ${userImage && frameImage ? "cursor-move" : ""
+          }`}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
