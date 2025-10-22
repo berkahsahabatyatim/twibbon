@@ -64,6 +64,24 @@ export const ImageEditor = ({
     frameImg.src = frameImage;
   }, [userImage, frameImage, scale, position, canvasRef]);
 
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (isDragging) {
+        e.preventDefault(); // prevent page scroll
+      }
+    };
+
+    // add non-passive listener
+    container.addEventListener("touchmove", handleTouchMove, { passive: false });
+
+    return () => {
+      container.removeEventListener("touchmove", handleTouchMove);
+    };
+  }, [isDragging]);
+
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     setIsDragging(true);
     setDragStart({
