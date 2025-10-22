@@ -2,9 +2,9 @@ import { useState, useRef } from "react";
 import { ImageUploader } from "@/components/ImageUploader";
 import { ImageEditor } from "@/components/ImageEditor";
 import { Controls } from "@/components/Controls";
-import { Sparkles } from "lucide-react";
 import { toast } from "sonner";
 import frame from "@/assets/frame.png";
+import logo from "@/assets/logobyi-white-transparent.png";
 
 const Index = () => {
   const [userImage, setUserImage] = useState<string | null>(null);
@@ -41,12 +41,12 @@ const Index = () => {
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
-              <Sparkles className="w-6 h-6 text-white" />
+            <div className="w-20 h-20">
+              <img src={logo} className="w-20 h-20 text-white" />
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Twibbon with BYI
+                Twibbon bersama BYI
               </h1>
               <p className="text-sm text-muted-foreground">
                 Mari rayakan bersama Berkah Sahabat Yatim

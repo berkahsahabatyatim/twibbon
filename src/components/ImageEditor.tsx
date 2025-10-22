@@ -143,7 +143,7 @@ export const ImageEditor = ({
         {!userImage || !frameImage ? (
           <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
             <p className="text-center px-4">
-              Upload your photo to start editing
+              Pilih foto untuk mulai edit
             </p>
           </div>
         ) : (

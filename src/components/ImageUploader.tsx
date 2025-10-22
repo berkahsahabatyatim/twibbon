@@ -25,7 +25,7 @@ export const ImageUploader = ({ onImageUpload, hasImage }: ImageUploaderProps) =
 
   return (
     <div className="space-y-4">
-      <h2 className="text-xl font-semibold text-foreground">Upload Your Photo</h2>
+      <h2 className="text-xl font-semibold text-foreground">Pilih Foto</h2>
       <Card className="p-8 border-dashed border-2 hover:border-primary transition-colors">
         <input
           ref={fileInputRef}
@@ -42,10 +42,10 @@ export const ImageUploader = ({ onImageUpload, hasImage }: ImageUploaderProps) =
           )}
           <div>
             <p className="text-sm text-foreground font-medium mb-1">
-              {hasImage ? "Photo uploaded!" : "Click to upload your photo"}
+              {hasImage ? "Foto sudah dipilih" : "Pilih foto"}
             </p>
             <p className="text-xs text-muted-foreground">
-              JPG, PNG or WEBP (MAX. 10MB)
+              JPG, PNG or WEBP (Maksimal 10MB)
             </p>
           </div>
           <Button
@@ -53,7 +53,7 @@ export const ImageUploader = ({ onImageUpload, hasImage }: ImageUploaderProps) =
             variant="default"
             className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
           >
-            {hasImage ? "Change Photo" : "Choose Photo"}
+            {hasImage ? "Ganti Foto" : "Pilih Foto"}
           </Button>
         </div>
       </Card>

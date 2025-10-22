@@ -32,7 +32,7 @@ export const Controls = ({
       <div className="space-y-4">
         <div className="flex items-center gap-2">
           <ZoomIn className="w-5 h-5 text-primary" />
-          <h3 className="font-semibold text-foreground">Zoom</h3>
+          <h3 className="font-semibold text-foreground">Perbesar / Perkecil</h3>
         </div>
         <div className="space-y-2">
           <Slider
@@ -60,7 +60,7 @@ export const Controls = ({
           disabled={!canDownload}
         >
           <RotateCcw className="w-4 h-4 mr-2" />
-          Reset
+          Ulangi
         </Button>
         <Button
           onClick={handleDownload}
